@@ -1,8 +1,12 @@
 var Events = function ()
 {
-	this.customEvents = {
-		webload: []
-	};
+	this.customEvents = {};
+
+	// Move all arguments (events names) to this.customEvents
+	if (arguments.length > 0)
+		for (var i=arguments.length-1; i >= 0; i--)
+			if (typeof arguments[i] === 'string')
+				this.customEvents[arguments[i]] = [];
 
 
 	// add(name fn)
