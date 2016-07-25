@@ -25,6 +25,11 @@ evt.on('click', fn); // After clicking on document fn will be executed
 evt.on('mouseout', fn, [el1, el2]); // fn will be applied on el1 and el2
 ```
 
+### Events#on(name, props)
+Executes functions of custom event.
+* **name (String)**: Name of event.
+* **props, optional**: Arguments for listening function to be executed.
+
 ## Examples
 Example #1:
 ```javascript
