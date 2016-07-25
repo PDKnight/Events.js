@@ -9,11 +9,11 @@ var Events = function ()
                 this.customEvents[arguments[i]] = [];
 
 
-    // add(name fn)
+    // add(name, fn, el)
     // Adds new event.
-    // name: name of event array of event names.
-    // fn: event function.
-    // el (optional): an element.
+    // name: name or group of events.
+    // fn: a function that executes with event.
+    // el (optional): a node or an array of nodes that events will be executed on.
     this.on = function (name, fn, el)
     {
         if ((typeof name != 'string' 
@@ -75,5 +75,7 @@ var Events = function ()
         {
             fns[i](props);
         }
+
+        return this;
     };
 };
